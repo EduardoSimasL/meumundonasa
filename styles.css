@@ -24,7 +24,7 @@ nav {
     background: rgb(2, 4, 5);
     color: white;
     padding: 20px;
-    width: 340px; /* Ajuste a largura conforme necessário */
+    width: 410px; /* Ajuste a largura conforme necessário */
 }
 
 .sidebar-header {
@@ -91,28 +91,136 @@ h1{
 h2 {
     color: #333;
 }
+.bottom-links {
+    display: flex;
+    padding-top: 20px; /* Adapte conforme necessário */
+}
+.bottom-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em; /* Adapte conforme necessário */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bottom-links img {
+    width: auto; /* Ajuste conforme necessário */
+    height: 40px; /* Ajuste conforme necessário */
+    border-radius: 50%; /* Para criar uma borda circular */
+    margin-right: 1px; /* Espaçamento entre a imagem e o texto (opcional) */
+}
+.video-column {
+    display: none; /* Inicialmente oculta */
+    width: 400px;
+    position: fixed;
+    top: 5cm;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    padding: 20px;
+    overflow-y: auto;
+    /* box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);*/
+}
+.video-column iframe {
+    margin-bottom: 20px; /* Adiciona espaçamento entre os vídeos */
+}
+section {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: white; /* Adiciona um fundo semi-transparente */
+    border-radius: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    /*background-image: url('sua-imagem.jpg');  Substitua 'sua-imagem.jpg' pelo caminho da sua imagem */
+    background-size: cover; /* Garante que a imagem cubra todo o contêiner */
+}
+.show-videos-btn {
+    position: fixed;
+    top: 4.3cm;
+    right: 20px;
+    padding: 10px;
+    font-size: 1.2em;
+    color: white;
+    background-color:  rgb(2, 4, 5);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1; /* Certifica-se de que o botão está sobreposto à div de vídeos */
+}
+.show-videos-btn:hover {
+    background-color:orange; /* Cor de destaque ao passar o mouse */
+}
 
 .two-columns {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px; /* Ajuste conforme necessário */
 }
-
+.three-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que as colunas quebrem para a próxima linha em telas menores */
+}
 .column {
-    flex-basis: calc(50% - 10px); /* 50% de largura com algum espaço entre as colunas */
+    flex-basis: calc(33.33% - 10px); /* 33.33% de largura com algum espaço entre as colunas */
+    margin-bottom: 20px; /* Ajuste conforme necessário */
 }
+.column textarea {
+    width: 50%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    box-sizing: border-box;
 
-.video-column {
-    width: 300px; /* Largura desejada para a coluna de vídeos */
+    /* Mudança de cor de fundo */
+    background-color: #f0f0f0; /* Substitua pela cor desejada */
+}
+.column textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+.user-profile {
     position: fixed;
-    top: 5cm;
+    top: 0;
     right: 0;
-    bottom: 0;
-    background-color: #f1f1f1; /* Cor de fundo desejada */
-    padding: 20px;
-    overflow-y: auto; /* Adiciona uma barra de rolagem quando necessário */
+    padding: 40px;
+    z-index: 1000; /* Certifica-se de que está acima de tudo */
 }
 
-.video-column iframe {
-    margin-bottom: 20px; /* Adiciona espaçamento entre os vídeos */
+.user-profile img {
+    width: 80px; /* Ajuste conforme necessário */
+    height: 80px;
+    border-radius: 100%; /* Para criar uma borda circular */
 }
+.search-bar {
+    margin-top: 20px;
+}
+
+.search-bar label {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(246, 244, 241);
+}
+
+.search-bar input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
