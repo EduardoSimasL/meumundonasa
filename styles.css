@@ -73,10 +73,26 @@ nav a:hover {
 header {
     background: rgb(13, 61, 145);
     color: white;
-    padding: 20px;
+    padding: 40px;
     text-align: center;
     z-index: 1;
     width: 100%;
+    justify-content: space-between;
+    display: flex;
+    box-sizing: border-box;
+}
+header .user-profile{
+    text-align: right;
+    z-index: 1;
+}
+.user-profile {
+    
+}
+
+.user-profile img {
+    width: 80px; /* Ajuste conforme necessário */
+    height: 80px;
+    border-radius: 100%; /* Para criar uma borda circular */
 }
 
 main {
@@ -148,8 +164,18 @@ section {
 
 .three-columns {
     display: flex;
-    justify-content: space-between;
+    justify-content:flex-start;
     flex-wrap: wrap; /* Permite que as colunas quebrem para a próxima linha em telas menores */
+}
+@media (max-width: 768px) {
+    .clickable-content {
+        width: calc(50% - 10px);
+    }
+}
+@media (max-width: 480px) {
+    .clickable-content {
+        width: 100%;
+    }
 }
 
 .column {
@@ -160,21 +186,6 @@ section {
     padding: 80px;
     height: 70px;
 }
-
-.user-profile {
-    position: fixed;
-    top: 0;
-    right: 0;
-    padding: 40px;
-    z-index: 100; /* Certifica-se de que está acima de tudo */
-}
-
-.user-profile img {
-    width: 80px; /* Ajuste conforme necessário */
-    height: 80px;
-    border-radius: 100%; /* Para criar uma borda circular */
-}
-
 
 .search-bar {
     margin-top: 20px;
@@ -216,18 +227,33 @@ section {
     margin-left: 20px; /* Ajuste conforme necessário */
 }
 
-.column h2 a {
-    color: #ffffff; /* Substitua #ff0000 pela cor desejada, pode ser um nome como "red" ou código hexadecimal */
-    text-decoration: none;
+.clickable-content {
+    width: 200px; /* Largura fixa desejada */
+    height: 150px; /* Altura fixa desejada */
+    margin-right: 50px; /* Espaçamento entre as colunas */
+    margin-bottom: auto;
+    margin-top: auto;
+    background-color: rgb(13, 61, 145);
+    color: white;
+    padding: 60px; /* Ajuste conforme necessário */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
 }
 
-a .column h2 {
-    color: #ffffff; /* Substitua #ff0000 pela cor desejada, pode ser um nome como "red" ou código hexadecimal */
-    text-decoration: none;
+.clickable-content h2{
+    color: #ffffff;
+    line-height: 150px;
+    margin: 0;
 }
-
-.column h2 a:hover {
-    color: #ffffff; /* Cor ao passar o mouse, substitua conforme desejado */
+.clickable-content a {
+    text-decoration: none;
+    color: white; /* Garante que o link tenha a cor branca */
+}
+.clickable-content:hover {
+    background-color: orange; /* Cor de destaque ao passar o mouse */
 }
 
 a {
@@ -250,7 +276,7 @@ a {
 }
 
 .form-group button {
-    width: 30%;
+    width: 200px;
     padding: 10px;
     background-color: rgb(13, 61, 145);
     color: #fff;
