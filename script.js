@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var shareLink = document.querySelector('li a[href="#secao1"]');
     var interactivesLink = document.querySelector('li a[href="#secao2"]');
     var learningsLink = document.querySelector('li a[href="#secao3"]');
+    var specialAgenciesLink = document.querySelector('li a[href="#secao4"]'); // Novo link adicionado
 
     // Adicionar um ouvinte de clique ao link "Share stories with the world"
     if (shareLink) {
@@ -36,6 +37,15 @@ document.addEventListener('DOMContentLoaded', function () {
         learningsLink.addEventListener('click', function (event) {
             event.preventDefault();
             window.location.href = 'Learnings.html';
+        });
+    }
+
+    // Adicionar um ouvinte de clique ao link "Special agencies"
+    if (specialAgenciesLink) {
+        specialAgenciesLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            // Substitua 'SpecialAgencies.html' pelo caminho correto do seu arquivo
+            window.location.href = 'SpecialAgencies.html';
         });
     }
 
