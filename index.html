@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap">
-
     <style>
         @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@900&display=swap');
     </style>
@@ -42,7 +41,7 @@
                 </div>
             </header>
             <main class="two-columns">
-                <section id="secao0">
+                <section id="secao0" class="special-section">
                     <h2>We will be very happy to receive your success stories, scientific or academic studies.</h2>
                     <div class="search-bar2">
                         <input type="email" id="email" name="email" placeholder="Your email...">
@@ -59,7 +58,6 @@
                     <h2>Category:</h2>
                     <p>Open Sciences, Astrophysics, Diversity and Equity, Earth, Planets and Moon, Sun</p>
                     <div class="search-bar">
-                        <label for="search">Search:</label>
                         <input type="text" id="search" name="search" placeholder="Search...">
                     </div>
 
@@ -131,6 +129,17 @@
                 </section>
             </main>
         </div>
+        <script>
+            // Exibir pop-up apenas uma vez para cada usuário
+            window.onload = function () {
+                var hasPopupShown = localStorage.getItem('popupShown');
+
+                if (!hasPopupShown) {
+                    alert('Welcome to NASA World!');
+                    localStorage.setItem('popupShown', 'true');
+                }
+            };
+        </script>
     </div>
     <script src="script.js"></script>
 </body>

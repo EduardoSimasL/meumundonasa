@@ -354,5 +354,9 @@ p{
     color: #333;
      /* transiçãode 0.3 segundos */
 }
-
+.special-section {
+    font-family: 'Roboto Condensed', sans-serif;
+    width: 100%;
+    margin: 0 auto;
+}
 
