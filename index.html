@@ -21,7 +21,7 @@
             <img src="Logo2.png" alt="Logo" class="login-logo">
             <form class="login-form" id="loginForm">
                 <div class="form-group">
-                    <label for="username">Login:</label>
+                    <label for="username">Username:</label>
                     <input type="text" id="username" name="username" required>
                 </div>
                 <div class="form-group">
@@ -42,7 +42,7 @@
             var username = document.getElementById('username').value;
             var password = document.getElementById('password').value;
 
-            if (username === 'usuario' && password === 'senha') {
+            if (username === 'user' && password === 'password') {
                 localStorage.setItem('username', username);
 
                 window.location.href = 'Page.html';
