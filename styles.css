@@ -286,4 +286,14 @@ a {
 p{
     color:#333;
 }
+.video-container {
+    width: 300px;  Largura desejada 
+    height: 200px; Altura desejada 
+    overflow: hidden;  Para garantir que a imagem não ultrapasse os limites da div 
+}
+
+.video-container img {
+    width: 100%; A imagem ocupa toda a largura da div
+    height: auto;  A altura é ajustada automaticamente para manter a proporção original da imagem 
+}
 
