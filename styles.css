@@ -347,7 +347,7 @@ p{
 }
 
 .img-description a:hover h2 {
-    color: orange; /* Altera a cor do h2 ao passar o mouse sobre o link */
+    color: orange; 
 }
 
 .img-description a h2 {
@@ -358,5 +358,8 @@ p{
     font-family: 'Roboto Condensed', sans-serif;
     width: 100%;
     margin: 0 auto;
+}
+.category-title {
+    color: #333;
 }
 
