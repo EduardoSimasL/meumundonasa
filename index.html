@@ -1,74 +1,39 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styleslog.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@900&display=swap');
     </style>
-    <title>Nasa</title>
+    <title>Página de Login</title>
 </head>
 
 <body>
-
-    <div class="wrapper">
-        <div class="user-profile">
-            <!-- Adicione a imagem do perfil aqui -->
-            <img src="IMG_2022.jpg" alt="Perfil do Usuário">
+    <div class="login-container">
+        <div class="login-left">
+            <img src="imagem1.jpg" alt="Background Image">
+            <h1>SHARE YOUR <br>EXPERIENCE <br>TO THE <br>WORLD</h1>
         </div>
-        <nav>
-            <div class="sidebar-header">
-                <img src="Logo1.png" alt="Logo Meu Mundo NASA" class="logo-image">
-            </div>
-            <ul>
-                <li><a href="#secao1">NASA onboard diary</a></li>
-                <li><a href="#secao2">Interactive content</a></li>
-                <li><a href="#secao3">Learnings</a></li>
-                <li><a href="#secao4">Partners</a></li>
-                <a>Follow Nasa</a>
-                <ul class="bottom-links">
-                    <li><a href="https://www.facebook.com/NASA"><img src="youtube.png" alt="Facebook"></a></li>
-                    <li><a href="https://www.instagram.com/nasa/"><img src="youtube.png" alt="Instagram"></a></li>
-                    <li><a href="https://twitter.com/NASA"><img src="youtube.png" alt="Twitter"></a></li>
-                    <li><a href="https://twitter.com/NASA"><img src="youtube.png" alt="Twitter"></a></li>
-                </ul>
-            </ul>
-        </nav>
-        <div class="container">
-            <header>
-                <h1>Share with Nasa</h1>
-            </header>
-            <main class="column">
-                <!-- Conteúdo principal -->
-                <section id="secao1">
-                    <h2>Seção 1</h2>
-                    <p>Conteúdo da Seção 1.</p>
-                    <div class="column">
-                        <textarea rows="10" cols="40" placeholder="Digite seu texto aqui..."></textarea>
-                    </div>
-            </main>
-            
-
-            <button onclick="toggleVideoVisibility('show')" class="show-videos-btn">Videos</button>
-
-            <div id="videoColumn" class="video-column" style="display: block;">
-                <section id="secao1">
-                    <h2>Categories:</h2>
-                    <p>Ciências abertas,  Astrofísica,  Diversidade e equidade, Terra , Planetas e Lua, Sol</p>
-                    <div class="search-bar">
-                        <label for="search">Search:</label>
-                        <input type="text" id="search" name="search" placeholder="Digite sua busca...">
-                    </div>
-                <iframe width="300" height="200" src="https://www.youtube.com/embed/v=IxZLhJ_4ffY" frameborder="0"
-                    allowfullscreen></iframe>
-                <iframe width="300" height="200" src="https://www.youtube.com/embed/T3Y6RRSDm4o" frameborder="0"
-                    allowfullscreen></iframe>
-            </div>
+        <div class="login-right">
+            <img src="Logo2.png" alt="Logo" class="login-logo">
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="username">Login:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Entrar</button>
+                </div>
+            </form>
         </div>
     </div>
-    <script src="script.js"></script>
 </body>
 
 </html>
