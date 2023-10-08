@@ -56,6 +56,10 @@ nav a {
     color: white;
     display: block;
     padding: 10px;
+    white-space: nowrap;
+}
+.break-text a {
+    white-space: normal; /* Permite a quebra de texto apenas para este item */
 }
 
 nav a:hover {
@@ -85,9 +89,7 @@ header .user-profile{
     text-align: right;
     z-index: 1;
 }
-.user-profile {
-    
-}
+
 
 .user-profile img {
     width: 80px; /* Ajuste conforme necessário */
@@ -125,7 +127,7 @@ h2 {
 
 .bottom-links img {
     width: auto;
-    height: 50px;
+    height: 40px;
     border-radius: 100%;
     margin-right: 1px;
 }
@@ -196,7 +198,17 @@ section {
     color: #333;
 }
 
-.search-bar input,
+.search-bar input {
+    border: none;
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    background-color: rgb(246, 244, 241);
+}
+.search-bar2 input,
 .textarea textarea {
     border: none;
     width: 100%;
@@ -228,20 +240,22 @@ section {
 }
 
 .clickable-content {
-    width: 200px; /* Largura fixa desejada */
-    height: 150px; /* Altura fixa desejada */
-    margin-right: 50px; /* Espaçamento entre as colunas */
+    width: 200px;
+    height: 150px;
+    margin-right: 50px;
     margin-bottom: auto;
     margin-top: auto;
     background-color: rgb(13, 61, 145);
     color: white;
-    padding: 60px; /* Ajuste conforme necessário */
+    padding: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     border-radius: 5px;
+    cursor: pointer; /* Adiciona a propriedade cursor:pointer; */
 }
+
 
 .clickable-content h2{
     color: #ffffff;
@@ -287,13 +301,21 @@ p{
     color:#333;
 }
 .video-container {
-    width: 300px;  Largura desejada 
-    height: 200px; Altura desejada 
-    overflow: hidden;  Para garantir que a imagem não ultrapasse os limites da div 
+    width: 300px; 
+    height: 200px;
+    overflow: hidden;
 }
 
 .video-container img {
-    width: 100%; A imagem ocupa toda a largura da div
-    height: auto;  A altura é ajustada automaticamente para manter a proporção original da imagem 
+    width: 100%; 
+    height: auto;
+}
+.video-description a {
+    color: #007BFF; /* Cor desejada para os links dentro das descrições dos vídeos */
+    text-decoration: none; /* Remova o sublinhado padrão */
+}
+
+.video-description a:hover {
+    color: #0056b3; /* Cor de destaque ao passar o mouse */
 }
 
