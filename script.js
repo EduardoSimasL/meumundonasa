@@ -1,17 +1,15 @@
-
 document.addEventListener('DOMContentLoaded', function () {
-    const navLinks = document.querySelectorAll('nav a');
+    // Encontrar o elemento de link
+    var shareLink = document.querySelector('li a[href="#secao1"]');
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
+    // Adicionar um ouvinte de clique ao link
+    if (shareLink) {
+        shareLink.addEventListener('click', function (event) {
+            // Impedir o comportamento padrão de seguir o link
+            event.preventDefault();
 
-            window.scrollTo({
-                top: targetElement.offsetTop - document.querySelector('header').offsetHeight,
-                behavior: 'smooth'
-            });
+            // Redirecionar para a página desejada
+            window.location.href = 'Page.html';
         });
-    });
+    }
 });
