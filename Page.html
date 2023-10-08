@@ -14,58 +14,59 @@
 <body>
 
     <div class="wrapper">
-        <div class="user-profile">
-            <!-- Adicione a imagem do perfil aqui -->
-            <img src="IMG_2022.jpg" alt="Perfil do Usuário">
-        </div>
         <nav>
             <div class="sidebar-header">
                 <img src="Logo1.png" alt="Logo Meu Mundo NASA" class="logo-image">
             </div>
             <ul>
-                <li><a href="#secao1">NASA onboard diary</a></li>
+                <li><a href="#secao1">Share stories with the world</a></li>
                 <li><a href="#secao2">Interactive content</a></li>
                 <li><a href="#secao3">Learnings</a></li>
-                <li><a href="#secao4">Partners</a></li>
-                <a>Follow Nasa</a>
-                <ul class="bottom-links">
-                    <li><a href="https://www.facebook.com/NASA"><img src="youtube.png" alt="Facebook"></a></li>
-                    <li><a href="https://www.instagram.com/nasa/"><img src="youtube.png" alt="Instagram"></a></li>
-                    <li><a href="https://twitter.com/NASA"><img src="youtube.png" alt="Twitter"></a></li>
-                    <li><a href="https://twitter.com/NASA"><img src="youtube.png" alt="Twitter"></a></li>
-                </ul>
+            </ul>
+            <a class="follow-nasa">Follow Nasa</a>
+            <ul class="bottom-links">
+                <li><a href="https://www.facebook.com/NASA"><img src="facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://www.instagram.com/nasa/"><img src="instagram.png" alt="Instagram"></a></li>
+                <li><a href="https://twitter.com/NASA"><img src="twitter2.png" alt="Twitter"></a></li>
+                <li><a href="https://twitter.com/NASA"><img src="youtube.png" alt="Twitter"></a></li>
             </ul>
         </nav>
         <div class="container">
             <header>
                 <h1>Share with Nasa</h1>
+                <div class="user-profile">
+                    <img src="User.png" alt="Perfil do Usuário">
+                </div>
             </header>
-            <main class="column">
-                <!-- Conteúdo principal -->
+            <main class="two-columns">
                 <section id="secao1">
-                    <h2>Seção 1</h2>
-                    <p>Conteúdo da Seção 1.</p>
-                    <div class="column">
-                        <textarea rows="10" cols="40" placeholder="Digite seu texto aqui..."></textarea>
+                    <h2>We will be very happy to receive your success stories, scientific or academic studies.</h2>
+                    <div class="search-bar">
+                        <input type="email" id="email" name="email" placeholder="Your email...">
                     </div>
-            </main>
-            
+                    <div class="textarea">
+                        <textarea rows="10" cols="40" placeholder="Type here..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">SEND</button>
+                    </div>
+                </section>
 
-            <button onclick="toggleVideoVisibility('show')" class="show-videos-btn">Videos</button>
-
-            <div id="videoColumn" class="video-column" style="display: block;">
-                <section id="secao1">
-                    <h2>Categories:</h2>
-                    <p>Ciências abertas,  Astrofísica,  Diversidade e equidade, Terra , Planetas e Lua, Sol</p>
+                <section id="secao2">
+                    <h2>Category:</h2>
+                    <p>Open Sciences, Astrophysics, Diversity and Equity, Earth, Planets and Moon, Sun</p>
                     <div class="search-bar">
                         <label for="search">Search:</label>
-                        <input type="text" id="search" name="search" placeholder="Digite sua busca...">
+                        <input type="text" id="search" name="search" placeholder="Search...">
                     </div>
-                <iframe width="300" height="200" src="https://www.youtube.com/embed/v=IxZLhJ_4ffY" frameborder="0"
-                    allowfullscreen></iframe>
-                <iframe width="300" height="200" src="https://www.youtube.com/embed/T3Y6RRSDm4o" frameborder="0"
-                    allowfullscreen></iframe>
-            </div>
+                    <div><h2>Science</h2><p>More than 150 years have passed since novelist Jules Verne wrote “Journey to the Center of the Earth,” but reality has yet to catch up with that science fiction adventure. While humans can’t bore a path to our planet’s metallic core, NASA’s Psyche mission will visit a giant asteroid that may be the solidified remains of the molten core of a bygone world.   </p></div>
+                    <div><h2>UARS: The Upper Atmosphere Research Satellite</h2><p>This video summarizes science and data obtained by the Upper Atmosphere Research Satellite (UARS) mission. UARS was launched in 1991 to study ozone </p></div>
+                    <iframe width="300" height="200" src="https://www.youtube.com/embed/IxZLhJ_4ffY" frameborder="0"
+                        allowfullscreen></iframe>
+                    <iframe width="300" height="200" src="https://www.jpl.nasa.gov/press-kits/psyche/mission/science#gravity " frameborder="0"
+                        allowfullscreen></iframe>
+                </section>
+            </main>
         </div>
     </div>
     <script src="script.js"></script>

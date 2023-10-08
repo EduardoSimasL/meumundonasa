@@ -11,20 +11,19 @@ body {
 }
 
 .logo-image {
-    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
-    height: auto; /* Mantém a proporção original da imagem */
+    max-width: 100%;
+    height: auto;
     padding-top: 1cm;
     padding-bottom: 1cm;
     /*width: 300px;
     height: 280px;*/
 }
 
-
 nav {
     background: rgb(2, 4, 5);
     color: white;
     padding: 20px;
-    width: 410px; /* Ajuste a largura conforme necessário */
+    width: 350px;
 }
 
 .sidebar-header {
@@ -48,6 +47,7 @@ nav {
 nav ul {
     list-style: none;
     padding: 0;
+    margin-bottom: 20px;
 }
 
 nav a {
@@ -67,6 +67,7 @@ nav a:hover {
     flex-direction: column;
     min-height: 100vh;
     width: 100%;
+    background-size: cover;
 }
 
 header {
@@ -74,8 +75,8 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
-    z-index: 1; /* Mantém o cabeçalho acima do conteúdo principal */
-    width: 100%; /* Adicionado para garantir 100% de largura */
+    z-index: 1;
+    width: 100%;
 }
 
 main {
@@ -83,47 +84,36 @@ main {
     padding: 20px;
 }
 
-/* Estilos para tornar o layout mais agradável */
-h1{
+h1 {
     color: #ffffff;
     font-size: 1.2cm;
 }
+
 h2 {
     color: #333;
 }
+
 .bottom-links {
     display: flex;
-    padding-top: 20px; /* Adapte conforme necessário */
+    padding-top: 2px;
 }
+
 .bottom-links a {
     text-decoration: none;
     color: #333;
-    font-size: 1.2em; /* Adapte conforme necessário */
+    font-size: 1.2em;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .bottom-links img {
-    width: auto; /* Ajuste conforme necessário */
-    height: 40px; /* Ajuste conforme necessário */
-    border-radius: 50%; /* Para criar uma borda circular */
-    margin-right: 1px; /* Espaçamento entre a imagem e o texto (opcional) */
+    width: auto;
+    height: 50px;
+    border-radius: 100%;
+    margin-right: 1px;
 }
-.video-column {
-    display: none; /* Inicialmente oculta */
-    width: 400px;
-    position: fixed;
-    top: 5cm;
-    right: 0;
-    bottom: 0;
-    background-color: white;
-    padding: 20px;
-    overflow-y: auto;
-    /* box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);*/
-}
-.video-column iframe {
-    margin-bottom: 20px; /* Adiciona espaçamento entre os vídeos */
-}
+
 section {
     padding: 20px;
     margin: 20px 0;
@@ -131,14 +121,6 @@ section {
     border-radius: 10px;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    width: 100%;
-    /*background-image: url('sua-imagem.jpg');  Substitua 'sua-imagem.jpg' pelo caminho da sua imagem */
-    background-size: cover; /* Garante que a imagem cubra todo o contêiner */
-}
 .show-videos-btn {
     position: fixed;
     top: 4.3cm;
@@ -146,52 +128,45 @@ section {
     padding: 10px;
     font-size: 1.2em;
     color: white;
-    background-color:  rgb(2, 4, 5);
+    background-color: rgb(2, 4, 5);
     border: none;
     border-radius: 5px;
     cursor: pointer;
     z-index: 1; /* Certifica-se de que o botão está sobreposto à div de vídeos */
 }
+
 .show-videos-btn:hover {
-    background-color:orange; /* Cor de destaque ao passar o mouse */
+    background-color: orange; /* Cor de destaque ao passar o mouse */
 }
 
 .two-columns {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px; /* Ajuste conforme necessário */
+    /*flex-wrap: wrap;  Permite que os elementos quebrem para a próxima linha em telas menores */
 }
+
 .three-columns {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap; /* Permite que as colunas quebrem para a próxima linha em telas menores */
 }
+
 .column {
     flex-basis: calc(33.33% - 10px); /* 33.33% de largura com algum espaço entre as colunas */
-    margin-bottom: 20px; /* Ajuste conforme necessário */
+    margin-bottom: 50px;
+    background-color: rgb(13, 61, 145);
+    color: white;
+    padding: 80px;
+    height: 70px;
 }
-.column textarea {
-    width: 50%;
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 5px;
-    box-sizing: border-box;
 
-    /* Mudança de cor de fundo */
-    background-color: #f0f0f0; /* Substitua pela cor desejada */
-}
-.column textarea:focus {
-    border-color: #007BFF;
-    outline: none;
-}
 .user-profile {
     position: fixed;
     top: 0;
     right: 0;
     padding: 40px;
-    z-index: 1000; /* Certifica-se de que está acima de tudo */
+    z-index: 100; /* Certifica-se de que está acima de tudo */
 }
 
 .user-profile img {
@@ -199,6 +174,8 @@ section {
     height: 80px;
     border-radius: 100%; /* Para criar uma borda circular */
 }
+
+
 .search-bar {
     margin-top: 20px;
 }
@@ -208,19 +185,79 @@ section {
     color: #333;
 }
 
-.search-bar input {
+.search-bar input,
+.textarea textarea {
+    border: none;
+    width: 100%;
     padding: 10px;
     font-size: 1em;
-    border: 1px solid #ccc;
     border-radius: 5px;
     margin-top: 5px;
-    width: 100%;
     box-sizing: border-box;
     background-color: rgb(246, 244, 241);
 }
 
 .search-bar input:focus {
-    border-color: #007BFF;
+    border-color: rgb(13, 61, 145);
     outline: none;
+}
+
+.textarea textarea {
+    border-color: white;
+    outline: none;
+    resize: none;
+    background-color: rgb(246, 244, 241);
+}
+
+
+.header-image {
+    max-width: 100%;
+    height: auto;
+    margin-left: 20px; /* Ajuste conforme necessário */
+}
+
+.column h2 a {
+    color: #ffffff; /* Substitua #ff0000 pela cor desejada, pode ser um nome como "red" ou código hexadecimal */
+    text-decoration: none;
+}
+
+a .column h2 {
+    color: #ffffff; /* Substitua #ff0000 pela cor desejada, pode ser um nome como "red" ou código hexadecimal */
+    text-decoration: none;
+}
+
+.column h2 a:hover {
+    color: #ffffff; /* Cor ao passar o mouse, substitua conforme desejado */
+}
+
+a {
+    text-decoration: none;
+}
+
+.follow-nasa {
+    color: #fff; 
+    /*text-decoration: none;  Remover sublinhado padrão 
+    font-size: 1.5em;  Tamanho da fonte 
+    padding: 10px;  Preenchimento ao redor do texto 
+    background-color: #333;  Cor de fundo 
+    border-radius: 5px;  Borda arredondada 
+    display: inline-block;  Permite ajustar o preenchimento e a borda sem afetar outros elementos */
+    margin-top: 200px; 
+}
+
+.follow-nasa:hover {
+    color: #ffffff;
+}
+
+.form-group button {
+    width: 30%;
+    padding: 10px;
+    background-color: rgb(13, 61, 145);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+p{
+    color:#333;
 }
 

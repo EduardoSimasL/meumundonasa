@@ -86,7 +86,7 @@ body {
 .form-group button {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: rgb(13, 61, 145);
     color: #fff;
     border: none;
     cursor: pointer;
