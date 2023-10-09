@@ -40,12 +40,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Adicionar um ouvinte de clique ao link "Special agencies"
-    if (specialAgenciesLink) {
-        specialAgenciesLink.addEventListener('click', function (event) {
+    // Adicionar um ouvinte de clique ao link "Space agencies"
+    if (SpaceagenciesLink) {
+        SpaceagenciesLink.addEventListener('click', function (event) {
             event.preventDefault();
-            // Substitua 'SpecialAgencies.html' pelo caminho correto do seu arquivo
-            window.location.href = 'SpecialAgencies.html';
+            // Substitua 'Spaceagencies.html' pelo caminho correto do seu arquivo
+            window.location.href = 'Spaceagencies.html';
         });
     }
 
