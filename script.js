@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var shareLink = document.querySelector('li a[href="#secao1"]');
     var interactivesLink = document.querySelector('li a[href="#secao2"]');
     var learningsLink = document.querySelector('li a[href="#secao3"]');
-    var specialAgenciesLink = document.querySelector('li a[href="#secao4"]'); // Novo link adicionado
+    var SpaceagenciesLink = document.querySelector('li a[href="#secao4"]'); // Novo link adicionado
 
     // Adicionar um ouvinte de clique ao link "Share stories with the world"
     if (shareLink) {
